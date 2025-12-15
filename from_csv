@@ -3,7 +3,6 @@
 #s2,Movie,7:19,Jorge Michel Grau,"Demián Bichir, Héctor Bonilla, Oscar Serrano, Azalia Ortiz, Octavio Michel, Carmen Beato",Mexico,"December 23, 2016",2016,93,"After a devastating earthquake hits Mexico City, trapped survivors from all walks of life wait to be rescued while trying desperately to stay alive.",Dramas
 
 import pandas as pd
-import matplotlib.pyplot as plt
 netflix_df = pd.read_csv("netflix_data.csv")
 only_1990 = netflix_df[(netflix_df['release_year'] >= 1990) & (netflix_df['release_year'] < 2000)]
 duration = only_1990['duration'].mode().iloc[0]
