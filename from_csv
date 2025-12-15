@@ -1,0 +1,10 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+netflix_df = pd.read_csv("netflix_data.csv")
+only_1990 = netflix_df[(netflix_df['release_year'] >= 1990) & (netflix_df['release_year'] < 2000)]
+duration = only_1990['duration'].mode().iloc[0]
+short_movie_count = only_1990[
+    (only_1990['duration'] < 90) &
+    (only_1990['type'] == 'Movie') &
+    (only_1990['genre'] == 'Action')
+].shape[0]
