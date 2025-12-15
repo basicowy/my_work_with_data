@@ -11,3 +11,5 @@ short_movie_count = only_1990[
     (only_1990['type'] == 'Movie') &
     (only_1990['genre'] == 'Action')
 ].shape[0]
+print(f" the most frequent movie duration in the 1990s :{duration} minutes")
+print(f"short action movies(duration under 90 minutes) released in the 1990s : {short_movie_count}")
